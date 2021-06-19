@@ -1,0 +1,35 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+    root: INFO
+
+
+spring:
+  application:
+    name: mediamarkt
+
+  datasource:
+    url: jdbc:h2:mem:mm
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: true
+
+server:
+  port: 8080
